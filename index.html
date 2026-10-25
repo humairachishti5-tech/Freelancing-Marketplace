@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODIORA | Freelance Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h2>CODIORA</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#categories">Categories</a>
+        <a href="profile.html">Freelancer Profile</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Find the Right Freelancer</h1>
+    <p>Discover talented freelancers for your next project.</p>
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search services or freelancers..."
+    >
+  </section>
+
+  <section id="categories" class="section">
+    <h2>Browse Categories</h2>
+    <div class="category-buttons">
+      <button onclick="filterCategory('All')">All</button>
+      <button onclick="filterCategory('Web Development')">Web Development</button>
+      <button onclick="filterCategory('Graphic Design')">Graphic Design</button>
+      <button onclick="filterCategory('Writing')">Writing</button>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Popular Freelancers</h2>
+
+    <label for="sortSelect">Sort by:</label>
+    <select id="sortSelect">
+      <option value="default">Default</option>
+      <option value="priceLow">Price: Low to High</option>
+      <option value="priceHigh">Price: High to Low</option>
+    </select>
+
+    <div id="freelancerCards" class="cards"></div>
+    <p id="noResults" class="no-results">No freelancers found.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 CODIORA. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
